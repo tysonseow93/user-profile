@@ -1,0 +1,1 @@
+This is a basic user page created using ionic framework.
