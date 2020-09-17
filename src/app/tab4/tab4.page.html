@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+    <ion-title>Edit Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+
+  <ion-input type="email" [(ngModel)]="email" placeholder="{{this.displayPlaceHolder(email)}}" required value="{{email}}">Email:</ion-input>
+  <ion-button [routerLink]="['/tab1']" type="submit" (click)="setEmail(email)">Submit</ion-button>
+
+</ion-grid>

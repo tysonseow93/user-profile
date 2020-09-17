@@ -1,17 +1,13 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 3
-    </ion-title>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+    <ion-title>Edit Phone Number</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 3</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-grid>
 
-  <app-explore-container name="Tab 3 page"></app-explore-container>
-</ion-content>
+  <ion-input type="tel" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" [(ngModel)]="phoneNumber" placeholder="{{this.displayPlaceHolder(phone)}}" required value="{{phone}}">Phone Number:</ion-input>
+  <ion-button [routerLink]="['/tab1']" type="submit" (click)="setPhoneNumber(phoneNumber)">Submit</ion-button>
+
+</ion-grid>

@@ -1,0 +1,13 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+    <ion-title>Edit Bio</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-grid>
+
+  <ion-input type="textarea" [(ngModel)]="bio" placeholder="{{this.displayPlaceHolder(bio)}}" required value="{{bio}}">Bio:</ion-input>
+  <ion-button [routerLink]="['/tab1']" type="submit" (click)="setBio(bio)">Submit</ion-button>
+
+</ion-grid>

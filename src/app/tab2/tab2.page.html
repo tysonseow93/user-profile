@@ -1,17 +1,14 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
-    <ion-title>
-      Tab 2
-    </ion-title>
+    <ion-back-button defaultHref="/" slot="start"></ion-back-button>
+    <ion-title>Edit Name</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-grid>
 
-  <app-explore-container name="Tab 2 page"></app-explore-container>
-</ion-content>
+  <ion-input [(ngModel)]="firstName" placeholder="{{this.displayPlaceHolder(firstName)}}" required value="{{firstName}}">First Name:</ion-input>
+  <ion-input [(ngModel)]="lastName" placeholder="{{this.displayPlaceHolder(lastName)}}" required value="{{lastName}}">Last Name:</ion-input>
+  <ion-button [routerLink]="['/tab1']" type="submit" (click)="setName(firstName, lastName)">Submit</ion-button>
+
+</ion-grid>
