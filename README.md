@@ -9,11 +9,17 @@ the web vision will have all the same functionality as the app.
 to launch the app on android you must have android studio installed. 
 
 use the commands
-ionic build, 
-ionic cap add ios,
-ionic cap add android,
-ionic cap copy, 
-ionic cap sync,
+
+ionic build
+
+ionic cap add ios
+
+ionic cap add android
+
+ionic cap copy
+
+ionic cap sync
+
 ionic cap open android
 
 then select run in android studio.
